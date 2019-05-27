@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Booking no:</strong>
+  <%= @booking.booking_no %>
+</p>
+
+<p>
+  <strong>Booking date:</strong>
+  <%= @booking.booking_date %>
+</p>
+
+<p>
+  <strong>Booking note:</strong>
+  <%= @booking.booking_note %>
+</p>
+
+<p>
+  <strong>Navigation:</strong>
+  <%= @booking.navigation %>
+</p>
+
+<p>
+  <strong>Shipment date:</strong>
+  <%= @booking.shipment_date %>
+</p>
+
+<p>
+  <strong>Ship departure date:</strong>
+  <%= @booking.ship_departure_date %>
+</p>
+
+<p>
+  <strong>Average arrival day:</strong>
+  <%= @booking.average_arrival_day %>
+</p>
+
+<p>
+  <strong>Document delivery time:</strong>
+  <%= @booking.document_delivery_time %>
+</p>
+
+<p>
+  <strong>Invoice date:</strong>
+  <%= @booking.invoice_date %>
+</p>
+
+<p>
+  <strong>Payment date:</strong>
+  <%= @booking.payment_date %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

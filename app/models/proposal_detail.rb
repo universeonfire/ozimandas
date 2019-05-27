@@ -1,0 +1,3 @@
+class ProposalDetail < ApplicationRecord
+
+end

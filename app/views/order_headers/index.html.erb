@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Order Headers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Order date</th>
+      <th>Deadline</th>
+      <th>Invoice number</th>
+      <th>Shipment date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @order_headers.each do |order_header| %>
+      <tr>
+        <td><%= order_header.order_date %></td>
+        <td><%= order_header.deadline %></td>
+        <td><%= order_header.invoice_number %></td>
+        <td><%= order_header.shipment_date %></td>
+        <td><%= link_to 'Show', order_header %></td>
+        <td><%= link_to 'Edit', edit_order_header_path(order_header) %></td>
+        <td><%= link_to 'Destroy', order_header, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order Header', new_order_header_path %>

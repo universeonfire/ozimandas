@@ -1,0 +1,19 @@
+<div class = "prop-dets"> 
+   
+    <%= f.label "Ürün ID" %>
+    <%= f.number_field :item_id ,class:"item-id" %> 
+    <%= f.label "Ürün Adı" %>
+  
+    <%= f.label "Ürün Adet" %>
+    <%= f.number_field :quantity %>
+    <%= f.label "Birim Fiyat" %>
+    <%= f.number_field :unit_price %>
+    <%= f.label "Toplam Fiyat" %>
+    <%= f.number_field :total_price %>
+  
+
+   
+  
+   <%= link_to_remove_association "Satırı Sil" , f , class: "btn btn-danger" %>
+</div>
+ 

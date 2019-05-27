@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Transporter name:</strong>
+  <%= @transporter.transporter_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @transporter.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @transporter.phone %>
+</p>
+
+<%= link_to 'Edit', edit_transporter_path(@transporter) %> |
+<%= link_to 'Back', transporters_path %>

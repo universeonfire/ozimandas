@@ -1,0 +1,37 @@
+<table id="items-datatable" data-source="<%= items_path(format: :json) %>">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
+     
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item', new_item_path %>
+
+<script>
+    jQuery(document).ready(function() {
+        $('#items-datatable').dataTable({
+            "processing": true,
+            "serverSide": true,
+            "columnDefs": [{ "orderable": false, "targets": -1 }],
+            "ajax": $('#items-datatable').data('source'),
+            "pagingType": "full_numbers",
+            "columns": [
+                {"data": "id"},
+                {"data": "item_name"},
+                {"data": "item_description"},
+               
+            ]
+            // pagingType is optional, if you want full pagination controls.
+            // Check dataTables documentation to learn more about
+            // available options.
+        });
+    });
+</script>

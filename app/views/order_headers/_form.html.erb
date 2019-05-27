@@ -1,0 +1,37 @@
+<%= form_with(model: order_header, local: true) do |form| %>
+  <% if order_header.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order_header.errors.count, "error") %> prohibited this order_header from being saved:</h2>
+
+      <ul>
+      <% order_header.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :order_date %>
+    <%= form.date_select :order_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deadline %>
+    <%= form.date_select :deadline %>
+  </div>
+
+  <div class="field">
+    <%= form.label :invoice_number %>
+    <%= form.text_field :invoice_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shipment_date %>
+    <%= form.date_select :shipment_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

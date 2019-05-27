@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Teklifler</h1>
+<table id="proposals-datatable" class = "dt-select hover stripe order-column row-border" data-source="<%= proposals_path_url(format: :json) %>">
+  
+  <thead>
+  <tr>
+    <th>ID</th>
+
+    <th>Başlık</th>
+    <th>Açıklama</th>
+     
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<br>
+
+
+
+<script>
+    jQuery(document).ready(function() {
+        $('#proposals-datatable').dataTable({
+            "processing": true,
+            "serverSide": true,
+            "columnDefs": [{ "orderable": false, "targets": -1 }],
+            "ajax": $('#proposals-datatable').data('source'),
+            "pagingType": "full_numbers",
+            "columns": [
+                {"data": "id"},
+                {"data": "title"},
+                {"data": "description"},
+                
+            ],
+            "oLanguage": {
+              
+              "oPaginate": {
+                "sFirst": "İlk", // This is the link to the first page
+                "sPrevious": "Önceki", // This is the link to the previous page
+                "sNext": "Sonraki", // This is the link to the next page
+                "sLast": "Son" // This is the link to the last page
+              },
+              "sSearch": "<span>Arama:</span> _INPUT_", //search
+              "sLengthMenu": "_MENU_ Göster"
+
+            }
+        });
+    });
+</script>
+

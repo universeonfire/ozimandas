@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item name:</strong>
+  <%= @item.item_name %>
+</p>
+
+<p>
+  <strong>Item description:</strong>
+  <%= @item.item_description %>
+</p>
+ 
+<p>
+  <strong>Item unit:</strong>
+  <%= Unit.find(id=@item.unit_id).unit_title%>
+</p>
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

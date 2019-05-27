@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @proposal_header.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @proposal_header.description %>
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Stok Adı</th>
+      <th>Stok Birimi</th>
+      <th>Miktar</th>
+      <th>Fiyat</th>
+      <th>Tutar</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+    <% @proposal_header.prop_dets.each do |prop_det| %>
+      <tr class="table-row">
+        <td> <%= prop_det.quantity %> </td>
+        <td> <%= prop_det.unit_price %> </td>
+        <td> <%= prop_det.total_price %> </td>
+      </tr>
+    <% end %>
+    
+  </tbody>
+</table>
+<div>
+   
+<%= link_to 'Back', proposal_headers_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @navigation.title %>
+</p>
+
+<p>
+  <strong>Is visible:</strong>
+  <%= @navigation.is_visible %>
+</p>
+
+<p>
+  <strong>Can create:</strong>
+  <%= @navigation.can_create %>
+</p>
+
+<p>
+  <strong>Can edit:</strong>
+  <%= @navigation.can_edit %>
+</p>
+
+<p>
+  <strong>Can delete:</strong>
+  <%= @navigation.can_delete %>
+</p>
+
+<%= link_to 'Edit', edit_navigation_path(@navigation) %> |
+<%= link_to 'Back', navigations_path %>

@@ -1,0 +1,55 @@
+<%= form_with(model: navigation, local: true) do |form| %>
+  <% if navigation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(navigation.errors.count, "error") %> prohibited this navigation from being saved:</h2>
+
+      <ul>
+      <% navigation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= form.label :Kullanıcı %>
+     <%= form.collection_select(:user_id, User.all, :id, :username,
+                {
+                  
+                  include_blank: true
+                },class: "form-control")%>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :path %>
+    <%= form.text_field :path %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_visible %>
+    <%= form.check_box :is_visible %>
+  </div>
+
+  <div class="field">
+    <%= form.label :can_create %>
+    <%= form.check_box :can_create %>
+  </div>
+
+  <div class="field">
+    <%= form.label :can_edit %>
+    <%= form.check_box :can_edit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :can_delete %>
+    <%= form.check_box :can_delete %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ImportExport</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+  
+  </head>
+  
+  <body>
+    <%= render "pages/navbar" %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <div id="modal-holder"></div>
+  </body>
+</html>

@@ -69,7 +69,7 @@ gem 'gritter', '~> 1.2'
 gem 'redis', '~> 4.1'
 gem 'redcarpet', '~> 3.4'
 gem 'administrate', '~> 0.11.0'
-gem 'gon', '~> 6.2', '>= 6.2.1'
+gem 'gon', '~> 6.4'
 gem 'ajax-datatables-rails'
 gem 'jquery-datatables'
 gem "responders"
